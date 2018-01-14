@@ -4,7 +4,6 @@ import { FormInputComponent } from './form-input/form-input.component';
 import { FormErrorComponent } from './form-error/form-error.component';
 import { AtomsModule } from '../atoms/atoms.module';
 import { InputTextModule } from 'primeng/primeng';
-import { TemplateHeaderComponent } from './template-header/template-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     FormInputComponent,
     FormErrorComponent,
-    TemplateHeaderComponent,
   ]
 })
 export class MoleculesModule { }
