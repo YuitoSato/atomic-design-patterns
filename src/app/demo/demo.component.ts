@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'adp-demo',
   templateUrl: './demo.component.html',
   styleUrls: [
     './demo.component.scss',
-    '../../assets/styles/form.scss',
   ]
 })
 export class DemoComponent {
@@ -33,8 +32,12 @@ export class DemoComponent {
     emailConfirm: {
       required:  '確認用のメールアドレスを入力してください',
       maxlength: '50文字以内で入力してください',
+      confirmEmail:   'メールアドレスが一致しません',
     },
-    organization: {
+    organization1: {
+      maxlength: '50文字以内で入力してください'
+    },
+    organization2: {
       maxlength: '50文字以内で入力してください'
     }
   };
@@ -51,8 +54,17 @@ export class DemoComponent {
       firstName:    ['', [Validators.required, Validators.maxLength(20)]],
       password:     ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8)]],
       email:        ['', [Validators.required, Validators.maxLength(50)]],
-      confirmEmail: ['', [Validators.required, Validators.maxLength(50)]],
-      organization: ['', [Validators.maxLength(50)]],
+      emailConfirm: ['', [Validators.required, Validators.maxLength(50)]],
+      organization1: ['', [Validators.maxLength(50)]],
+      organization2: ['', [Validators.maxLength(50)]],
+    },
+    {
+      validator: this.validateEmailNotConfirmed
     });
+  }
+
+  private validateEmailNotConfirmed(g: FormGroup): ValidationErrors | null {
+    const { email, emailConfirm } = g.value;
+    return email === emailConfirm ? null : { confirmEmail: true };
   }
 }

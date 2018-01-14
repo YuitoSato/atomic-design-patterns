@@ -1,17 +1,19 @@
 <adp-template title="ユーザー登録">
   <form [formGroup]="form">
-    <adp-block class="flex">
+    <adp-block>
       <adp-label label="氏名" [required]="true"></adp-label>
-      <adp-form-input
-        inputType="text"
-        placeholder="例）山田"
-        [targetControl]="form.get('lastName')">
-      </adp-form-input>
-      <adp-form-input
-        inputType="text"
-        placeholder="例）山田"
-        [targetControl]="form.get('firstName')"
-      ></adp-form-input>
+      <div class="flex">
+        <adp-form-input
+          inputType="text"
+          placeholder="例）山田"
+          [targetControl]="form.get('lastName')">
+        </adp-form-input>
+        <adp-form-input
+          inputType="text"
+          placeholder="例）山田"
+          [targetControl]="form.get('firstName')"
+        ></adp-form-input>
+      </div>
       <adp-form-error
         [targetControl]="form.get('lastName')"
         [errorMessages]="errorMessages.lastName"
@@ -44,21 +46,32 @@
         label="メールアドレス（確認）"
         inputType="text"
         [required]="true"
-        [targetControl]="form.get('confirmEmail')"
+        [targetControl]="form.get('emailConfirm')"
         [errorMessages]="errorMessages.emailConfirm"
       ></adp-form-input>
+      <adp-form-error
+        [targetControl]="form"
+        [errorMessages]="errorMessages.emailConfirm"
+      ></adp-form-error>
     </adp-block>
-    <adp-block>
+    <adp-block class="block">
       <adp-form-input
         label="所属"
         inputType="text"
-        [targetControl]="form.get('organization')"
+        placeholder="例）株式会社〇〇"
+        [targetControl]="form.get('organization1')"
+        [errorMessages]="errorMessages.organization"
+      ></adp-form-input>
+      <adp-form-input
+        inputType="text"
+        placeholder="例）△△部"
+        [targetControl]="form.get('organization2')"
         [errorMessages]="errorMessages.organization"
       ></adp-form-input>
     </adp-block>
     <adp-block>
-      <button pButton type="button" (click)="count()" label="送信"></button>
-      <button pButton type="button" (click)="count()" label="キャンセル" class="ui-button-secondary"></button>
+      <button pButton type="submit" (click)="count()" label="送信"></button>
+      <button pButton type="submit" (click)="count()" label="キャンセル" class="ui-button-secondary"></button>
     </adp-block>
   </form>
 </adp-template>
