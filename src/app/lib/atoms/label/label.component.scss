@@ -1,0 +1,12 @@
+@import '../../../../assets/styles/colors.scss';
+
+:host {
+  display: block;
+  padding-bottom: 5px;
+  i {
+    color: $color-alert;
+    font-size: 3px;
+    position: relative;
+    top: -3px;
+  }
+}

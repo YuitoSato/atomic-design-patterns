@@ -1,3 +1,11 @@
+@import "./assets/styles/colors";
+@import "./assets/styles/font-sizes";
+@import "./assets/styles/basic-styles";
+
+// primeng
 @import "../node_modules/primeng/resources/themes/omega/theme.css";
 @import "../node_modules/primeng/resources/primeng.min.css";
+@import "./assets/styles/primeeg_override";
+
+// font-awesome
 @import "../node_modules/font-awesome/css/font-awesome.min.css";

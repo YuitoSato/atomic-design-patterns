@@ -1,0 +1,10 @@
+@import '../../../../assets/styles/colors.scss';
+
+:host {
+  display: flex;
+  padding-top: 5px;
+
+  p {
+    color: $color-alert;
+  }
+}

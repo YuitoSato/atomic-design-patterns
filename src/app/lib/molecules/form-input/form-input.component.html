@@ -1,0 +1,12 @@
+<adp-label
+  *ngIf="label"
+  [label]="label"
+  required
+></adp-label>
+<input
+  pInputText
+  [type]="inputType"
+  [placeholder]="placeholder ? placeholder : ''"
+  [formControl]="targetControl"
+/>
+<adp-form-error></adp-form-error>

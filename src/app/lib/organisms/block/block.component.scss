@@ -1,0 +1,6 @@
+@import '../../../../assets/styles/positions';
+
+:host {
+  display: block;
+  padding: $gutter / 2;
+}

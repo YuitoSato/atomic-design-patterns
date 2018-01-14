@@ -1,3 +1,53 @@
-<p>
-  demo works!
-</p>
+<adp-template title="ユーザー登録">
+  <form [formGroup]="form">
+    <adp-block>
+      <adp-label label="氏名" required></adp-label>
+      <input
+        type="text"
+        pInputText
+        placeholder="例）山田"
+        formControlName="lastName"
+      />
+      <input
+        type="text"
+        pInputText
+        placeholder="例）太郎"
+        formControlName="firstName"
+      />
+    </adp-block>
+    <adp-block>
+      <adp-form-input
+        label="パスワード"
+        inputType="password"
+        required
+        [targetControl]="form.get('password')"
+      ></adp-form-input>
+    </adp-block>
+    <!--<adp-block>-->
+      <!--<adp-form-input-->
+        <!--label="メールアドレス"-->
+        <!--inputType="text"-->
+        <!--required-->
+      <!--&gt;</adp-form-input>-->
+    <!--</adp-block>-->
+    <!--<adp-block>-->
+      <!--<adp-form-input-->
+        <!--label="メールアドレス（確認）"-->
+        <!--inputType="text"-->
+        <!--required-->
+      <!--&gt;</adp-form-input>-->
+    <!--</adp-block>-->
+    <!--<adp-block>-->
+      <!--<adp-form-input-->
+        <!--label="所属"-->
+        <!--inputType="text"-->
+        <!--required-->
+      <!--&gt;</adp-form-input>-->
+    <!--</adp-block>-->
+    <adp-block>
+      <button pButton type="button" (click)="count()" label="送信"></button>
+      <button pButton type="button" (click)="count()" label="キャンセル" class="ui-button-secondary"></button>
+    </adp-block>
+  </form>
+  {{form.value | json}}
+</adp-template>

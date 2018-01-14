@@ -1,0 +1,31 @@
+@import './colors.scss';
+@import './font-sizes.scss';
+
+html {
+  background-color: $bg;
+}
+
+h1 {
+  font-size: $h1-size;
+  font-weight: 700;
+  color: $text;
+  line-height: 1.5;
+}
+
+p {
+  font-size: $p-size;
+  color: $text;
+  line-height: 1.6;
+  margin: 0;
+}
+
+span {
+  font-size: $span-size;
+  color: $text-sub;
+  line-height: 1.7;
+}
+
+* {
+  box-sizing : border-box;
+  margin: 0;
+}

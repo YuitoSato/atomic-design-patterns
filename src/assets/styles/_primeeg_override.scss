@@ -1,0 +1,9 @@
+@import './colors';
+
+.ui-button-text {
+  color: $bg-white;
+}
+
+.ui-button-secondary > .ui-button-text {
+  color: $text-sub;
+}
