@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { bindBooleanProperty } from '../../../utiils/property-binder';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,16 +6,13 @@ import { FormControl } from '@angular/forms';
   templateUrl: './form-input.component.html',
   styleUrls: ['./form-input.component.scss']
 })
-export class FormInputComponent implements OnInit {
+export class FormInputComponent {
   @Input() inputType: string;
+  @Input() targetControl: FormControl;
   @Input() placeholder?: string;
   @Input() label?: string;
   @Input() required?: boolean;
-  @Input() targetControl: FormControl;
+  @Input() errorMessages?: { [key: string]: string};
 
   constructor() { }
-
-  ngOnInit() {
-    this.required = bindBooleanProperty(this.required);
-  }
 }

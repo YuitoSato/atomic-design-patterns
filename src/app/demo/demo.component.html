@@ -1,53 +1,66 @@
 <adp-template title="ユーザー登録">
   <form [formGroup]="form">
-    <adp-block>
-      <adp-label label="氏名" required></adp-label>
-      <input
-        type="text"
-        pInputText
+    <adp-block class="flex">
+      <adp-label label="氏名" [required]="true"></adp-label>
+      <adp-form-input
+        inputType="text"
         placeholder="例）山田"
-        formControlName="lastName"
-      />
-      <input
-        type="text"
-        pInputText
-        placeholder="例）太郎"
-        formControlName="firstName"
-      />
+        [targetControl]="form.get('lastName')">
+      </adp-form-input>
+      <adp-form-input
+        inputType="text"
+        placeholder="例）山田"
+        [targetControl]="form.get('firstName')"
+      ></adp-form-input>
+      <adp-form-error
+        [targetControl]="form.get('lastName')"
+        [errorMessages]="errorMessages.lastName"
+      ></adp-form-error>
+      <adp-form-error
+        [targetControl]="form.get('firstName')"
+        [errorMessages]="errorMessages.firstName"
+      ></adp-form-error>
     </adp-block>
     <adp-block>
       <adp-form-input
         label="パスワード"
         inputType="password"
-        required
+        [required]="true"
         [targetControl]="form.get('password')"
+        [errorMessages]="errorMessages.password"
       ></adp-form-input>
     </adp-block>
-    <!--<adp-block>-->
-      <!--<adp-form-input-->
-        <!--label="メールアドレス"-->
-        <!--inputType="text"-->
-        <!--required-->
-      <!--&gt;</adp-form-input>-->
-    <!--</adp-block>-->
-    <!--<adp-block>-->
-      <!--<adp-form-input-->
-        <!--label="メールアドレス（確認）"-->
-        <!--inputType="text"-->
-        <!--required-->
-      <!--&gt;</adp-form-input>-->
-    <!--</adp-block>-->
-    <!--<adp-block>-->
-      <!--<adp-form-input-->
-        <!--label="所属"-->
-        <!--inputType="text"-->
-        <!--required-->
-      <!--&gt;</adp-form-input>-->
-    <!--</adp-block>-->
+    <adp-block>
+      <adp-form-input
+        label="メールアドレス"
+        inputType="text"
+        [required]="true"
+        [targetControl]="form.get('email')"
+        [errorMessages]="errorMessages.email"
+      ></adp-form-input>
+    </adp-block>
+    <adp-block>
+      <adp-form-input
+        label="メールアドレス（確認）"
+        inputType="text"
+        [required]="true"
+        [targetControl]="form.get('confirmEmail')"
+        [errorMessages]="errorMessages.emailConfirm"
+      ></adp-form-input>
+    </adp-block>
+    <adp-block>
+      <adp-form-input
+        label="所属"
+        inputType="text"
+        [targetControl]="form.get('organization')"
+        [errorMessages]="errorMessages.organization"
+      ></adp-form-input>
+    </adp-block>
     <adp-block>
       <button pButton type="button" (click)="count()" label="送信"></button>
       <button pButton type="button" (click)="count()" label="キャンセル" class="ui-button-secondary"></button>
     </adp-block>
   </form>
-  {{form.value | json}}
 </adp-template>
+
+{{form.value | json}}

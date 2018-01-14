@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'adp-demo',
@@ -12,6 +12,33 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class DemoComponent {
   form: FormGroup;
 
+  errorMessages: { [key: string]: { [key: string]: string } } = {
+    lastName: {
+      required:  '苗字を入力してください',
+      maxlength: '20文字以内で入力してください',
+    },
+    firstName: {
+      required:  '名前を入力してください',
+      maxlength: '20文字以内で入力してください',
+    },
+    password: {
+      required:  'パスワードを入力してください',
+      maxlength: '20文字以内で入力してください',
+      minlength: '8文字以上で入力してください',
+    },
+    email: {
+      required:  'メールアドレスを入力してください',
+      maxlength: '50文字以内で入力してください',
+    },
+    emailConfirm: {
+      required:  '確認用のメールアドレスを入力してください',
+      maxlength: '50文字以内で入力してください',
+    },
+    organization: {
+      maxlength: '50文字以内で入力してください'
+    }
+  };
+
   constructor(
     private fb: FormBuilder,
   ) {
@@ -20,12 +47,12 @@ export class DemoComponent {
 
   private createForm(): FormGroup {
     return this.fb.group({
-      'lastName': '',
-      'firstName': '',
-      'password': '',
-      'emailAddress': '',
-      'confirmEmailAddress': '',
-      'organization': '',
+      lastName:     ['', [Validators.required, Validators.maxLength(20)]],
+      firstName:    ['', [Validators.required, Validators.maxLength(20)]],
+      password:     ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8)]],
+      email:        ['', [Validators.required, Validators.maxLength(50)]],
+      confirmEmail: ['', [Validators.required, Validators.maxLength(50)]],
+      organization: ['', [Validators.maxLength(50)]],
     });
   }
 }

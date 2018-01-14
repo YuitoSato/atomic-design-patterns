@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'adp-form-error',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-error.component.scss']
 })
 export class FormErrorComponent implements OnInit {
+  @Input() targetControl: FormControl;
+  @Input() errorMessages: { [key: string]: string};
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  public getValidatorTypes(): string[] {
+    return Object.keys(this.errorMessages);
+  }
 }

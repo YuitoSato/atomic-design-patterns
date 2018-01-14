@@ -1,1 +1,7 @@
-<p>まちがっているよ</p>
+<ng-container *ngIf="!!errorMessages">
+  <div *ngFor="let validatorType of getValidatorTypes()">
+    <p *ngIf="targetControl.hasError(validatorType) && targetControl.touched">
+      {{ errorMessages[validatorType] }}
+    </p>
+  </div>
+</ng-container>
