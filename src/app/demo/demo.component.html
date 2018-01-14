@@ -2,7 +2,7 @@
   <form [formGroup]="form">
     <adp-block>
       <adp-label label="氏名" [required]="true"></adp-label>
-      <div class="flex">
+      <div class="input-flex">
         <adp-form-input
           inputType="text"
           placeholder="例）山田"
@@ -54,7 +54,7 @@
         [errorMessages]="errorMessages.emailConfirm"
       ></adp-form-error>
     </adp-block>
-    <adp-block class="block">
+    <adp-block class="input-block">
       <adp-form-input
         label="所属"
         inputType="text"

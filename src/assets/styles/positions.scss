@@ -1,14 +1,1 @@
 $gutter: 20px;
-
-.flex > * + * {
-  padding-left: $gutter / 2;
-  margin-left: -5px;
-}
-
-.block > * {
-  display: block !important;
-}
-
-.block > * + * {
-  padding-top: $gutter / 2;
-}

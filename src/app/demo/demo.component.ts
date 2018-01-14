@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/f
   templateUrl: './demo.component.html',
   styleUrls: [
     './demo.component.scss',
+    '../../assets/styles/form.scss',
   ]
 })
 export class DemoComponent {
