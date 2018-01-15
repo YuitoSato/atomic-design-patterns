@@ -1,0 +1,9 @@
+@import '../../../../assets/styles/colors';
+
+:host {
+  display: block;
+  background-color: $color-main;
+  width: 80px;
+  height: 100%;
+  position: fixed;
+}

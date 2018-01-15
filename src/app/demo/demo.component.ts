@@ -56,6 +56,7 @@ export class DemoComponent {
     if (this.form.invalid) {
       this.submitFailed = true;
     }
+    console.log(this.form.value);
   }
 
   private createForm(): FormGroup {

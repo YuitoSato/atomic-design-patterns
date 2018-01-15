@@ -11,6 +11,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
   exports: [
     TemplateComponent,
     FormComponent,
+    SideBarComponent,
   ],
   declarations: [
     TemplateComponent,
