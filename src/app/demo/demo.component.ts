@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
+function validateEmailNotConfirmed(g: FormGroup): ValidationErrors | null {
+  const { email, emailConfirm } = g.value;
+  return email === emailConfirm ? null : { confirmEmail: true };
+}
+
 @Component({
   selector: 'adp-demo',
   templateUrl: './demo.component.html',
@@ -55,21 +60,16 @@ export class DemoComponent {
 
   private createForm(): FormGroup {
     return this.fb.group({
-      lastName:     ['', [Validators.required, Validators.maxLength(20)]],
-      firstName:    ['', [Validators.required, Validators.maxLength(20)]],
-      password:     ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8)]],
-      email:        ['', [Validators.required, Validators.maxLength(50)]],
-      emailConfirm: ['', [Validators.required, Validators.maxLength(50)]],
+      lastName:      ['', [Validators.required, Validators.maxLength(20)]],
+      firstName:     ['', [Validators.required, Validators.maxLength(20)]],
+      password:      ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8)]],
+      email:         ['', [Validators.required, Validators.maxLength(50)]],
+      emailConfirm:  ['', [Validators.required, Validators.maxLength(50)]],
       organization1: ['', [Validators.maxLength(50)]],
       organization2: ['', [Validators.maxLength(50)]],
     },
     {
-      validator: this.validateEmailNotConfirmed
+      validator: validateEmailNotConfirmed
     });
-  }
-
-  private validateEmailNotConfirmed(g: FormGroup): ValidationErrors | null {
-    const { email, emailConfirm } = g.value;
-    return email === emailConfirm ? null : { confirmEmail: true };
   }
 }
