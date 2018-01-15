@@ -4,10 +4,7 @@ import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/f
 @Component({
   selector: 'adp-demo',
   templateUrl: './demo.component.html',
-  styleUrls: [
-    './demo.component.scss',
-    '../../assets/styles/form.scss',
-  ]
+  styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent {
   form: FormGroup;

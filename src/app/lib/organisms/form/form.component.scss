@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/positions';
+
+adp-form {
+  > form {
+    > div + div {
+      margin-top: $gutter;
+    }
+
+    .input-flex > * + * {
+      padding-left: $gutter / 2;
+      margin-left: -5px;
+    }
+
+    .input-block > * {
+      display: block !important;
+    }
+
+    .input-block > * + * {
+      padding-top: $gutter / 2;
+    }
+  }
+}

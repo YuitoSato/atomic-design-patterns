@@ -7,15 +7,11 @@
   width: 800px;
 
   header {
-    padding: $gutter / 2;
+    padding: $gutter $gutter ($gutter / 2) $gutter;
     border-bottom: 1px solid $border;
-
-    h1 {
-      padding: 0 ($gutter / 2);
-    }
   }
 
   div {
-    padding: 0 ($gutter / 2) ($gutter / 2) ($gutter / 2);
+    padding: ($gutter / 2) $gutter $gutter $gutter;
   }
 }
