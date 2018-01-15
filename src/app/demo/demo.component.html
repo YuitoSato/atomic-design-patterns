@@ -7,8 +7,8 @@
           <adp-form-input
             inputType="text"
             placeholder="例）山田"
-            [targetControl]="form.get('lastName')">
-          </adp-form-input>
+            [targetControl]="form.get('lastName')"
+          ></adp-form-input>
           <adp-form-input
             inputType="text"
             placeholder="例）山田"
@@ -18,10 +18,12 @@
         <adp-form-error
           [targetControl]="form.get('lastName')"
           [errorMessages]="errorMessages['lastName']"
+          [submitFailed]="submitFailed"
         ></adp-form-error>
         <adp-form-error
           [targetControl]="form.get('firstName')"
           [errorMessages]="errorMessages['firstName']"
+          [submitFailed]="submitFailed"
         ></adp-form-error>
       </div>
       <div>
@@ -31,6 +33,7 @@
           [required]="true"
           [targetControl]="form.get('password')"
           [errorMessages]="errorMessages['password']"
+          [submitFailed]="submitFailed"
         ></adp-form-input>
       </div>
       <div>
@@ -40,6 +43,7 @@
           [required]="true"
           [targetControl]="form.get('email')"
           [errorMessages]="errorMessages['email']"
+          [submitFailed]="submitFailed"
         ></adp-form-input>
       </div>
       <div>
@@ -49,10 +53,12 @@
           [required]="true"
           [targetControl]="form.get('emailConfirm')"
           [errorMessages]="errorMessages['emailConfirm']"
+          [submitFailed]="submitFailed"
         ></adp-form-input>
         <adp-form-error
           [targetControl]="form"
           [errorMessages]="errorMessages['emailConfirm']"
+          [submitFailed]="submitFailed"
         ></adp-form-error>
       </div>
       <div class="input-block">
@@ -62,16 +68,18 @@
           placeholder="例）株式会社〇〇"
           [targetControl]="form.get('organization1')"
           [errorMessages]="errorMessages['organization']"
+          [submitFailed]="submitFailed"
         ></adp-form-input>
         <adp-form-input
           inputType="text"
           placeholder="例）△△部"
           [targetControl]="form.get('organization2')"
           [errorMessages]="errorMessages['organization']"
+          [submitFailed]="submitFailed"
         ></adp-form-input>
       </div>
       <div>
-        <button pButton type="submit" label="送信"></button>
+        <button pButton type="submit" (click)="submit()" label="送信"></button>
         <button pButton type="submit" label="キャンセル" class="ui-button-secondary"></button>
       </div>
     </form>

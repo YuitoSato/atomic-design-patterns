@@ -1,6 +1,7 @@
 <ng-container *ngIf="!!errorMessages">
   <div *ngFor="let validatorType of getValidatorTypes()">
-    <p *ngIf="targetControl.hasError(validatorType) && targetControl.touched">
+    <p *ngIf="targetControl.hasError(validatorType) && targetControl.touched ||
+     targetControl.hasError(validatorType) && submitFailed">
       {{ errorMessages[validatorType] }}
     </p>
   </div>

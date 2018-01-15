@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class FormErrorComponent implements OnInit {
   @Input() targetControl: FormControl;
   @Input() errorMessages: { [key: string]: string};
+  @Input() submitFailed?: false;
 
   constructor() { }
 

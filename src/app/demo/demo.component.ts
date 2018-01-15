@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/f
 })
 export class DemoComponent {
   form: FormGroup;
+  submitFailed = false;
 
   errorMessages: { [key: string]: { [key: string]: string } } = {
     lastName: {
@@ -44,6 +45,12 @@ export class DemoComponent {
     private fb: FormBuilder,
   ) {
     this.form = this.createForm();
+  }
+
+  public submit(): void {
+    if (this.form.invalid) {
+      this.submitFailed = true;
+    }
   }
 
   private createForm(): FormGroup {
