@@ -7,6 +7,8 @@ import { InputTextModule } from 'primeng/primeng';
 import { AtomsModule } from '../lib/atoms/atoms.module';
 import { ButtonModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoFormComponent } from './demo-form/demo-form.component';
+import { AppRoutingModule } from '../app.routing.module';
 
 @NgModule({
   imports: [
@@ -18,9 +20,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   declarations: [
-    DemoComponent
+    DemoComponent,
+    DemoFormComponent
   ]
 })
 export class DemoModule {
