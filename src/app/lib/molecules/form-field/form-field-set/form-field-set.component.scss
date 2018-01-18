@@ -1,0 +1,23 @@
+adp-form-field-set {
+  > div.block {
+    > * {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  > div.flex {
+    display: flex;
+
+    > * {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

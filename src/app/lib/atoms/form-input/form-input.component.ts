@@ -7,13 +7,10 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form-input.component.scss']
 })
 export class FormInputComponent {
-  @Input() inputType: string;
   @Input() targetControl: FormControl;
+  @Input() inputType?: string;
   @Input() submitFailed?: false;
   @Input() placeholder?: string;
-  @Input() label?: string;
-  @Input() required?: boolean;
-  @Input() errorMessages?: { [key: string]: string};
 
   constructor() { }
 }
