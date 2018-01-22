@@ -7,6 +7,9 @@ adp-data-table {
   tr {
     display: flex;
     padding: 0 20px;
+    border: {
+      bottom: 1px solid $border;
+    }
   }
   thead > tr {
     background-color: $bg;
@@ -22,7 +25,7 @@ adp-data-table {
 
   tbody > tr {
     background-color: $bg-white;
-    height: 80px;
+    min-height: 80px;
     align-items: center;
 
     td {
@@ -30,5 +33,4 @@ adp-data-table {
       word-wrap: break-word;
     }
   }
-
 }
