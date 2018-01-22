@@ -5,7 +5,7 @@
   background-color: $bg-white;
   display: block;
   width: 800px;
-  padding-left: 80px;
+  border: 1px solid $bg-dark;
 
   header {
     padding: $gutter $gutter ($gutter / 2) $gutter;

@@ -1,0 +1,14 @@
+@import '../../../../assets/styles/colors';
+
+:host {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  letter-spacing: 0.7px;
+  background-color: $bg-white;
+  z-index: 2000;
+  box-shadow: 0 2px 8px 0 rgba(#000000, 0.15);
+  position: fixed;
+  width: 100%;
+}

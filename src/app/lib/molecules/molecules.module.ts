@@ -5,8 +5,9 @@ import { FormErrorComponent } from './form-error/form-error.component';
 import { AtomsModule } from '../atoms/atoms.module';
 import { InputTextModule } from 'primeng/primeng';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormFieldComponent } from './form-field/form-field.component';
-import { FormFieldSetComponent } from './form-field/form-field-set/form-field-set.component';
+import { BlockComponent } from './block/block.component';
+import { HeaderComponent } from './header/header.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   imports: [
@@ -18,14 +19,16 @@ import { FormFieldSetComponent } from './form-field/form-field-set/form-field-se
   exports: [
     FormInputComponent,
     FormErrorComponent,
-    FormFieldComponent,
-    FormFieldSetComponent,
+    BlockComponent,
+    HeaderComponent,
+    CardComponent,
   ],
   declarations: [
     FormInputComponent,
     FormErrorComponent,
-    FormFieldComponent,
-    FormFieldSetComponent,
+    BlockComponent,
+    HeaderComponent,
+    CardComponent,
   ]
 })
 export class MoleculesModule { }

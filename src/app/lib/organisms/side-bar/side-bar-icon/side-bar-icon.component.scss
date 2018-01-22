@@ -1,16 +1,47 @@
 @import '../../../../../assets/styles/colors.scss';
 
-div {
-  border-radius: 100px;
-  height: 30px;
-  width: 30px;
-  border: 1px solid $border-light;
-  position: relative;
+:host {
+  > div {
+    padding: 18px 0;
 
-  i {
-    color: $border-light;
-    position: absolute;
-    left: 4px;
-    top: 4px;
+    &:hover {
+      background-color: $color-main-hover;
+      color: $color-accent;
+
+      .circle {
+        background-color: $color-accent;
+        border: 1px solid $color-accent;
+      }
+
+      .label {
+        span {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+  .circle {
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $bg-white;
+    position: relative;
+    margin: 0 auto;
+
+    i {
+      color: $text-white;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+    }
+  }
+
+  .label {
+    text-align: center;
+    margin-top: -5px;
+
+    span {
+      color: $text-white;
+    }
   }
 }

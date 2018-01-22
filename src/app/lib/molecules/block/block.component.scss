@@ -1,0 +1,58 @@
+$gutter-s: 5px;
+$gutter-m: 10px;
+$gutter-l: 20px;
+
+adp-block {
+  display: block;
+
+  > div {
+    > * + * {
+      margin-top: $gutter-m;
+    }
+  }
+
+  > .s {
+    > * + * {
+      margin-top: $gutter-s;
+    }
+  }
+
+  > .l {
+    > * + * {
+      margin-top: $gutter-l;
+    }
+  }
+
+  > .flex {
+    display: flex;
+
+    > * + * {
+      margin-top: 0;
+      margin-left: $gutter-m;
+    }
+  }
+
+  > .flex .s {
+    > * + * {
+      margin-left: $gutter-s;
+    }
+  }
+
+  > .flex .l {
+    > * + * {
+      margin-left: $gutter-l;
+    }
+  }
+
+  > .right {
+    > * {
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  > .center {
+    justify-content: center;
+  }
+}

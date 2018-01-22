@@ -6,8 +6,10 @@
   width: 80px;
   height: 100%;
   position: fixed;
+  box-shadow: 2px 0 0 0 $bg-light;
+  z-index: 1000;
 
-  i {
-    color: $text-white
+  a {
+    text-decoration: none;
   }
 }

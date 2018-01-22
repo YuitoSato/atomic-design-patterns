@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TemplateComponent } from './template/template.component';
-import { FormComponent } from './form/form.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SideBarIconComponent } from './side-bar/side-bar-icon/side-bar-icon.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   imports: [
@@ -11,14 +12,16 @@ import { SideBarIconComponent } from './side-bar/side-bar-icon/side-bar-icon.com
   ],
   exports: [
     TemplateComponent,
-    FormComponent,
     SideBarComponent,
+    MainHeaderComponent,
+    ContentComponent,
   ],
   declarations: [
     TemplateComponent,
-    FormComponent,
     SideBarComponent,
     SideBarIconComponent,
+    MainHeaderComponent,
+    ContentComponent,
   ],
 })
 export class OrganismsModule {

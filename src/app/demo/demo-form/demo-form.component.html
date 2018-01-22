@@ -1,110 +1,106 @@
-<adp-template title="ユーザー登録">
-  <adp-form>
-    <form [formGroup]="form">
-      <adp-form-field>
-        <adp-label label="氏名" required></adp-label>
-        <adp-form-field-set flex>
-          <adp-form-input
-            placeholder="例）山田"
-            [targetControl]="form.get('lastName')"
-          ></adp-form-input>
-          <adp-form-input
-            placeholder="例）山田"
-            [targetControl]="form.get('firstName')"
-          ></adp-form-input>
-        </adp-form-field-set>
-        <adp-form-error
-          [errorMessages]="errorMessages['lastName']"
-          [targetControl]="form.get('lastName')"
-          [submitFailed]="submitFailed"
-        ></adp-form-error>
-        <adp-form-error
-          [errorMessages]="errorMessages['firstName']"
-          [targetControl]="form.get('firstName')"
-          [submitFailed]="submitFailed"
-        ></adp-form-error>
-      </adp-form-field>
+<adp-content>
+  <adp-header title="ユーザー登録"></adp-header>
 
-      <adp-form-field>
-        <adp-label label="パスワード" required></adp-label>
-        <adp-form-field-set>
+  <adp-card size="l">
+    <form [formGroup]="form">
+      <adp-block gutter="l" position="center">
+        <adp-block>
+          <adp-label label="氏名" required></adp-label>
+          <adp-block flex>
+            <adp-form-input
+              placeholder="例）山田"
+              [targetControl]="form.get('lastName')"
+            ></adp-form-input>
+            <adp-form-input
+              placeholder="例）太郎"
+              [targetControl]="form.get('firstName')"
+            ></adp-form-input>
+          </adp-block>
+          <adp-form-error
+            [errorMessages]="errorMessages['lastName']"
+            [targetControl]="form.get('lastName')"
+            [submitFailed]="submitFailed"
+          ></adp-form-error>
+          <adp-form-error
+            [errorMessages]="errorMessages['firstName']"
+            [targetControl]="form.get('firstName')"
+            [submitFailed]="submitFailed"
+          ></adp-form-error>
+        </adp-block>
+
+        <adp-block>
+          <adp-label label="パスワード" required></adp-label>
           <adp-form-input
             inputType="password"
             [targetControl]="form.get('password')"
           ></adp-form-input>
-        </adp-form-field-set>
-        <adp-form-error
-          [errorMessages]="errorMessages['password']"
-          [submitFailed]="submitFailed"
-          [targetControl]="form.get('password')"
-        ></adp-form-error>
-      </adp-form-field>
+          <adp-form-error
+            [errorMessages]="errorMessages['password']"
+            [submitFailed]="submitFailed"
+            [targetControl]="form.get('password')"
+          ></adp-form-error>
+        </adp-block>
 
-      <adp-form-field>
-        <adp-label label="メールアドレス" required></adp-label>
-        <adp-form-field-set>
+        <adp-block>
+          <adp-label label="メールアドレス" required></adp-label>
           <adp-form-input
             [targetControl]="form.get('email')">
           </adp-form-input>
-        </adp-form-field-set>
-        <adp-form-error
-          [targetControl]="form.get('email')"
-          [errorMessages]="errorMessages['email']"
-          [submitFailed]="submitFailed">
-        </adp-form-error>
-      </adp-form-field>
+          <adp-form-error
+            [targetControl]="form.get('email')"
+            [errorMessages]="errorMessages['email']"
+            [submitFailed]="submitFailed">
+          </adp-form-error>
+        </adp-block>
 
-      <adp-form-field>
-        <adp-label label="メールアドレス（確認）" required></adp-label>
-        <adp-form-field-set>
+        <adp-block>
+          <adp-label label="メールアドレス（確認）" required></adp-label>
           <adp-form-input
             [targetControl]="form.get('emailConfirm')">
           </adp-form-input>
-        </adp-form-field-set>
-        <adp-form-error
-          [targetControl]="form.get('emailConfirm')"
-          [errorMessages]="errorMessages['emailConfirm']"
-          [submitFailed]="submitFailed">
-        </adp-form-error>
-        <adp-form-error
-          [targetControl]="form"
-          [errorMessages]="errorMessages['emailConfirm']"
-          [submitFailed]="submitFailed"
-        ></adp-form-error>
-      </adp-form-field>
+          <adp-form-error
+            [targetControl]="form.get('emailConfirm')"
+            [errorMessages]="errorMessages['emailConfirm']"
+            [submitFailed]="submitFailed">
+          </adp-form-error>
+          <adp-form-error
+            [targetControl]="form"
+            [errorMessages]="errorMessages['emailConfirm']"
+            [submitFailed]="submitFailed"
+          ></adp-form-error>
+        </adp-block>
 
-      <adp-form-field>
-        <adp-label label="所属"></adp-label>
-        <adp-form-field-set>
-          <div>
-            <adp-form-input
-              [targetControl]="form.get('organization1')">
-            </adp-form-input>
-            <adp-form-error
-              [targetControl]="form.get('organization1')"
-              [errorMessages]="errorMessages['organization']"
-              [submitFailed]="submitFailed">
-            </adp-form-error>
-          </div>
-          <div>
-            <adp-form-input
-              [targetControl]="form.get('organization2')">
-            </adp-form-input>
-            <adp-form-error
-              [targetControl]="form.get('organization1')"
-              [errorMessages]="errorMessages['organization']"
-              [submitFailed]="submitFailed">
-            </adp-form-error>
-          </div>
-        </adp-form-field-set>
-      </adp-form-field>
+        <adp-block>
+          <adp-label label="所属"></adp-label>
+          <adp-block>
+            <div>
+              <adp-form-input
+                [targetControl]="form.get('organization1')">
+              </adp-form-input>
+              <adp-form-error
+                [targetControl]="form.get('organization1')"
+                [errorMessages]="errorMessages['organization']"
+                [submitFailed]="submitFailed">
+              </adp-form-error>
+            </div>
+            <div>
+              <adp-form-input
+                [targetControl]="form.get('organization2')">
+              </adp-form-input>
+              <adp-form-error
+                [targetControl]="form.get('organization1')"
+                [errorMessages]="errorMessages['organization']"
+                [submitFailed]="submitFailed">
+              </adp-form-error>
+            </div>
+          </adp-block>
+        </adp-block>
 
-      <adp-form-field>
-        <adp-form-field-set flex>
+        <adp-block flex>
           <button pButton type="submit" (click)="submit()" label="送信"></button>
           <button pButton type="submit" label="キャンセル" class="ui-button-secondary"></button>
-        </adp-form-field-set>
-      </adp-form-field>
+        </adp-block>
+      </adp-block>
     </form>
-  </adp-form>
-</adp-template>
+  </adp-card>
+</adp-content>
