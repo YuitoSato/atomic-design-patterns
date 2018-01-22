@@ -5,6 +5,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { SideBarIconComponent } from './side-bar/side-bar-icon/side-bar-icon.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { ContentComponent } from './content/content.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ContentComponent } from './content/content.component';
     SideBarComponent,
     MainHeaderComponent,
     ContentComponent,
+    DataTableComponent,
   ],
   declarations: [
     TemplateComponent,
@@ -22,6 +24,7 @@ import { ContentComponent } from './content/content.component';
     SideBarIconComponent,
     MainHeaderComponent,
     ContentComponent,
+    DataTableComponent,
   ],
 })
 export class OrganismsModule {

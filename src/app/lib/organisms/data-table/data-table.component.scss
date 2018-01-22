@@ -1,0 +1,34 @@
+@import '../../../../assets/styles/colors';
+
+adp-data-table {
+  table {
+    width: 100%;
+  }
+  tr {
+    display: flex;
+    padding: 0 20px;
+  }
+  thead > tr {
+    background-color: $bg;
+    height: 40px;
+    align-items: flex-end;
+
+    th {
+      width: 150px;
+      text-align: left;
+      word-wrap: break-word;
+    }
+  }
+
+  tbody > tr {
+    background-color: $bg-white;
+    height: 80px;
+    align-items: center;
+
+    td {
+      width: 150px;
+      word-wrap: break-word;
+    }
+  }
+
+}
