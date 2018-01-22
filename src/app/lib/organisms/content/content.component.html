@@ -1,4 +1,4 @@
 <ng-content select="adp-header"></ng-content>
-<div class="content">
+<div class="content" [ngClass]="padding ? 'padding': ''">
   <ng-content></ng-content>
 </div>
