@@ -1,12 +1,18 @@
-<a routerLink="/form">
-  <adp-side-bar-icon
-    label="フォーム"
-    icon="fa fa-envelope-o">
-  </adp-side-bar-icon>
-</a>
-<a routerLink="/table">
-  <adp-side-bar-icon
-    label="テーブル"
-    icon="fa fa-table">
-  </adp-side-bar-icon>
-</a>
+<div class="side-bar">
+  <a routerLink="/form">
+    <adp-side-bar-icon
+      label="フォーム"
+      icon="fa fa-envelope-o">
+    </adp-side-bar-icon>
+  </a>
+  <a routerLink="/table">
+    <adp-side-bar-icon
+      label="テーブル"
+      icon="fa fa-table">
+    </adp-side-bar-icon>
+  </a>
+</div>
+
+<div class="content">
+  <ng-content></ng-content>
+</div>

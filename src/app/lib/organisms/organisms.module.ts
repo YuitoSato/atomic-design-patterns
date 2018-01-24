@@ -6,10 +6,12 @@ import { SideBarIconComponent } from './side-bar/side-bar-icon/side-bar-icon.com
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { ContentComponent } from './content/content.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { AppRoutingModule } from '../../app.routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
   ],
   exports: [
     TemplateComponent,

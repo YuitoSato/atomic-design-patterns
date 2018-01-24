@@ -1,15 +1,22 @@
 @import '../../../../assets/styles/colors';
 
 :host {
-  display: block;
-  background-color: $color-main;
-  width: 80px;
-  height: 100%;
-  position: fixed;
-  box-shadow: 2px 0 0 0 $bg-light;
-  z-index: 1000;
+  .side-bar {
+    display: block;
 
-  a {
-    text-decoration: none;
+    background-color: $color-main;
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    box-shadow: 2px 0 0 0 $bg-light;
+    z-index: 1000;
+
+    a {
+      text-decoration: none;
+    }
   }
+}
+
+.content {
+  padding-left: 80px;
 }
