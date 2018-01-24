@@ -5,7 +5,8 @@ adp-data-table {
     width: 100%;
   }
   tr {
-    display: flex;
+    //display: flex;
+    // これをいれるとおかしくなる
     padding: 0 20px;
     border: {
       bottom: 1px solid $border;
@@ -17,7 +18,7 @@ adp-data-table {
     align-items: flex-end;
 
     th {
-      width: 150px;
+      //width: 150px;
       text-align: left;
       word-wrap: break-word;
     }
@@ -29,8 +30,10 @@ adp-data-table {
     align-items: center;
 
     td {
-      width: 150px;
+      max-width: 300px;
       word-wrap: break-word;
     }
+
+
   }
 }

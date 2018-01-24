@@ -2,12 +2,13 @@
 
 :host {
   display: block;
-  margin-bottom: -5px;
+  line-height: 1;
 
   i {
     color: $color-alert;
     font-size: 3px;
     position: relative;
     top: -3px;
+    line-height: 1 !important;
   }
 }
