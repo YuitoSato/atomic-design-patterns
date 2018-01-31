@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { DemoComponent } from './demo/demo.component';
 import { DemoFormComponent } from './demo/demo-form/demo-form.component';
 import { DemoTableComponent } from './demo/demo-table/demo-table.component';
+import { DemoOverlayComponent } from './demo/demo-overlay/demo-overlay.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,10 @@ const routes: Routes = [
       },
       {
         path: 'table', component: DemoTableComponent,
-      }
+      },
+      {
+        path: 'overlay', component: DemoOverlayComponent,
+      },
     ]
   },
 ];

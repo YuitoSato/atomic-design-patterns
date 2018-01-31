@@ -1,0 +1,23 @@
+<adp-content padding>
+  <adp-header title="Overlay"></adp-header>
+
+  <adp-card size="l">
+    <adp-block flex>
+      <adp-button label="Modal" (click)="openModal()"></adp-button>
+    </adp-block>
+  </adp-card>
+</adp-content>
+
+<adp-modal [(display)]="modalDisplay">
+  <adp-header title="Welcome to Modal!">
+  </adp-header>
+  <adp-modal-body>
+    Modal Body...
+  </adp-modal-body>
+  <adp-modal-footer>
+    <adp-block flex position="right">
+      <adp-button label="Yes" (click)="modalDisplay=false"></adp-button>
+      <adp-button label="No" style="secondary" (click)="modalDisplay=false"></adp-button>
+    </adp-block>
+  </adp-modal-footer>
+</adp-modal>

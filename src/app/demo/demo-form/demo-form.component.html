@@ -1,5 +1,5 @@
 <adp-content padding>
-  <adp-header title="ユーザー登録"></adp-header>
+  <adp-header title="Form"></adp-header>
 
   <adp-card size="l">
     <form [formGroup]="form">
@@ -97,8 +97,8 @@
         </adp-block>
 
         <adp-block flex>
-          <button pButton type="submit" (click)="submit()" label="送信"></button>
-          <button pButton type="submit" label="キャンセル" class="ui-button-secondary"></button>
+          <adp-button label="送信" type="submit" (click)="submit()"></adp-button>
+          <adp-button type="submit" label="キャンセル" style="secondary"></adp-button>
         </adp-block>
       </adp-block>
     </form>

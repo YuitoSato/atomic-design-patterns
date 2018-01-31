@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoFormComponent } from './demo-form/demo-form.component';
 import { AppRoutingModule } from '../app.routing.module';
 import { DemoTableComponent } from './demo-table/demo-table.component';
+import { DemoOverlayComponent } from './demo-overlay/demo-overlay.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -22,11 +24,13 @@ import { DemoTableComponent } from './demo-table/demo-table.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   declarations: [
     DemoComponent,
     DemoFormComponent,
-    DemoTableComponent
+    DemoTableComponent,
+    DemoOverlayComponent
   ]
 })
 export class DemoModule {

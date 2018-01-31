@@ -1,0 +1,18 @@
+@import '../../../../../assets/styles/colors';
+
+adp-modal-footer {
+  padding: 10px 20px;
+  display: block;
+  border-radius: 0 0 7px 7px;
+  background-color: $bg-light;
+
+  adp-button {
+    &:first-child {
+      margin-left: auto;
+    }
+  }
+
+  adp-button + adp-button {
+    margin-left: 10px;
+  }
+}

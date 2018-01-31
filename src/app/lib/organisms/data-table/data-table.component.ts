@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'adp-data-table',
-  templateUrl: './data-table.component.html',
+  template: '<table><ng-content></ng-content></table>',
   styleUrls: ['./data-table.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })

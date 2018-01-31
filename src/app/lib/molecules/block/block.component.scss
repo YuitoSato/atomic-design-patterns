@@ -26,8 +26,11 @@ adp-block {
   > .flex {
     display: flex;
 
-    > * + * {
+    * {
       margin-top: 0;
+    }
+
+    > * + * {
       margin-left: $gutter-m;
     }
   }
