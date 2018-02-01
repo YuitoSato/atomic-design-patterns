@@ -4,9 +4,9 @@
   <adp-card size="l">
     <form [formGroup]="form">
       <adp-block gutter="l">
-        <adp-block>
+        <adp-block gutter="s">
           <adp-label label="氏名" required></adp-label>
-          <adp-block flex>
+          <adp-block flex gutter="s">
             <adp-form-input
               placeholder="例）山田"
               [targetControl]="form.get('lastName')"
@@ -28,7 +28,7 @@
           ></adp-form-error>
         </adp-block>
 
-        <adp-block>
+        <adp-block gutter="s">
           <adp-label label="パスワード" required></adp-label>
           <adp-form-input
             inputType="password"
@@ -41,7 +41,7 @@
           ></adp-form-error>
         </adp-block>
 
-        <adp-block>
+        <adp-block gutter="s">
           <adp-label label="メールアドレス" required></adp-label>
           <adp-form-input
             [targetControl]="form.get('email')">
@@ -53,7 +53,7 @@
           </adp-form-error>
         </adp-block>
 
-        <adp-block>
+        <adp-block gutter="s">
           <adp-label label="メールアドレス（確認）" required></adp-label>
           <adp-form-input
             [targetControl]="form.get('emailConfirm')">
@@ -70,7 +70,7 @@
           ></adp-form-error>
         </adp-block>
 
-        <adp-block>
+        <adp-block gutter="s">
           <adp-label label="所属"></adp-label>
           <adp-block>
             <div>

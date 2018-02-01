@@ -8,6 +8,9 @@ html {
 
 body {
   height: 100%;
+  font-size: $p-size;
+  color: $text;
+  line-height: 1;
 }
 
 h1 {
@@ -17,14 +20,7 @@ h1 {
   line-height: 1.5;
 }
 
-p {
-  font-size: $p-size;
-  color: $text;
-  line-height: 1.6;
-  margin: 0;
-}
-
-span {
+.subtext {
   font-size: $span-size;
   color: $text-sub;
   line-height: 1.7;
@@ -33,4 +29,12 @@ span {
 * {
   box-sizing : border-box;
   margin: 0;
+}
+
+a {
+  color: $link;
+
+  &:hover {
+    color: $link-hover;
+  }
 }

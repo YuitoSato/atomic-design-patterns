@@ -1,5 +1,9 @@
 @import '../../../../assets/styles/colors.scss';
 
-p {
-  color: $color-alert;
+:host{
+  display: block;
+
+  p {
+    color: $color-alert;
+  }
 }

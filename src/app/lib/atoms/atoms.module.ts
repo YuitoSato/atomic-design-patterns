@@ -5,6 +5,7 @@ import { ButtonComponent } from './button/button.component';
 import { ButtonModule, InputTextModule } from 'primeng/primeng';
 import { FormInputComponent } from './form-input/form-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ActionIconComponent } from './action-icon/action-icon.component';
 
 @NgModule({
   imports: [
@@ -17,11 +18,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     LabelComponent,
     ButtonComponent,
     FormInputComponent,
+    ActionIconComponent,
   ],
   declarations: [
     LabelComponent,
     ButtonComponent,
     FormInputComponent,
+    ActionIconComponent,
   ]
 })
 export class AtomsModule { }

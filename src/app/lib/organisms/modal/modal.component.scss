@@ -12,7 +12,7 @@
 
     // Color
     background-color: $bg-white;
-    color: $text-link;
+    color: $link;
 
     // Position
     position: absolute;
@@ -27,7 +27,7 @@
 
     &:hover {
       background-color: $bg-hover;
-      color: $text-link-hover;
+      color: $link-hover;
     }
   }
 

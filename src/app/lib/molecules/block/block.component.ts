@@ -22,7 +22,7 @@ export class BlockComponent implements OnInit {
 
   ngOnInit() {
     this.flex = bindBooleanProperty(this.flex);
-    this.gutter = this.gutter || 'm';
+    this.gutter = this.gutter || 's';
     this.position = this.position || 'left';
   }
 }

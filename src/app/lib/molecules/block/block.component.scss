@@ -29,19 +29,21 @@ adp-block {
     * {
       margin-top: 0;
     }
-
-    > * + * {
-      margin-left: $gutter-m;
-    }
   }
 
-  > .flex .s {
+  > .flex.s {
     > * + * {
       margin-left: $gutter-s;
     }
   }
 
-  > .flex .l {
+  > .flex.m {
+    > * + * {
+      margin-left: $gutter-m;
+    }
+  }
+
+  > .flex.l {
     > * + * {
       margin-left: $gutter-l;
     }
