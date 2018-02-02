@@ -11,11 +11,6 @@
     margin: 0 auto;
     text-align: center;
     line-height: 1;
-
-
-    &:hover {
-      background-color: $bg-hover;
-    }
   }
 
   i {
@@ -25,5 +20,18 @@
 
   span {
     font-size: 10px;
+  }
+
+  .edit, .add {
+    &:hover {
+      background-color: $bg-hover;
+    }
+  }
+
+  .delete {
+    &:hover {
+      color: $color-alert !important;
+      background-color: $bg-alert;
+    }
   }
 }
