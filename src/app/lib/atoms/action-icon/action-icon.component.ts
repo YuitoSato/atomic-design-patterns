@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-const iconClass = {
-  add:
-}
+const iconClassMap = {
+  add: 'fa-plus',
+  edit: 'fa-pencil',
+  remove: 'fa-trash',
+};
 
 @Component({
   selector: 'adp-action-icon',
@@ -11,10 +13,14 @@ const iconClass = {
 })
 export class ActionIconComponent implements OnInit {
 
-  @Input() actionType: 'add' | 'edit' | 'delete';
+  @Input() actionType: 'add' | 'edit' | 'remove';
 
-  constructor() { }
+  iconClass: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.iconClass = iconClassMap[this.actionType];
   }
 }
